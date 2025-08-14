@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add New Dish</title>
+  <link rel="stylesheet" href="add.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="C:\Users\Lenovo\Downloads\homemade-food-delivery\assets\images\logo.png" alt="Logo" />
+      <h2>Homemade Food Delivery</h2>
+    </div>
+    <nav>
+      
+      <div class="user">
+        <img src="C:\Users\Lenovo\Downloads\homemade-food-delivery\assets\images\Shanto.jpg" alt="User" />
+        <div>
+          <strong>Shanto</strong><br />
+          <span>Gawchiya</span>
+        </div>
+        <button class="logout">Log Out</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-title"> Add a New Dish</div>
+    <form class="add-form" action="save_item.php" method="POST" enctype="multipart/form-data">
+      <label for="dish_name">Dish Name</label>
+      <input type="text" id="dish_name" name="dish_name" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="price">Price (Tk)</label>
+      <input type="number" id="price" name="price" required>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" required>
+
+      <label for="image">Dish Image</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <button type="submit" class="submit-btn">Add Dish</button>
+    </form>
+  </main>
+
+  <footer>
+    <h3>Your Favorite Food, Delivered! 🚀🍽️</h3>
+    <div class="footer-links">
+      <a href="#">About us</a>
+      <a href="#">Delivery</a>
+      <a href="#">Help & Support</a>
+      <a href="#">T&C</a>
+    </div>
+    <p>Contact: 01768844091</p>
+    <div class="social-icons">
+      <span>📘</span><span>📸</span><span>🐦</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* wave color matches matte dark strip */
+.hero-wrap { color: var(--ink); }
+.hero-wrap .hero-wave{
+  position:absolute; left:0; right:0; bottom:-1px; color:#2f353c;
+}
+.hero-wave svg{ display:block; width:100%; height:120px; }
+
+/* floating blobs */
+.blob{
+  position:absolute; filter: blur(30px); opacity:.23; pointer-events:none;
+}
+.blob-1{ width:240px; height:240px; background:#ffd7ec; top:-60px; left:-60px; border-radius:50%; animation: float 14s ease-in-out infinite; }
+.blob-2{ width:280px; height:280px; background:#dfeaff; right:-80px; top:40px; border-radius:50%; animation: float 18s ease-in-out .6s infinite; }
+
+@keyframes float{
+  0%,100%{ transform: translateY(0) translateX(0) }
+  50%{ transform: translateY(10px) translateX(6px) }
+}
+
+/* reveal on scroll */
+[data-reveal]{ opacity:0; transform: translateY(8px); transition: .6s cubic-bezier(.2,.75,.25,1); }
+[data-reveal].reveal-in{ opacity:1; transform: none; transition-delay: var(--delay, 0ms); }
+
+/* subtle tilt for hero image */
+.tilt{ transform-style: preserve-3d; }
+.tilt img{ will-change: transform; }
+
+/* softer primary btn surface */
+.btn-soft{ box-shadow: 0 10px 22px rgba(var(--bs-primary-rgb), .22); }
